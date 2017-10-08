@@ -1,6 +1,6 @@
 !#/bin/bash
 setparam(){
-cd /home/kumarjit/script/
+cd /home/user/script/
 for f in *
 do
 if [ -f "$1"]
@@ -8,8 +8,8 @@ then echo $1
 tran_file_name = "$1"
 }
 copy_files() {
-export URLFILE="/home/kumarjit/path_detail.txt"
-export destpath="/home/kumarjit/utilitycode.txt"
+export URLFILE="/home/user/path_detail.txt"
+export destpath="/home/user/utilitycode.txt"
 cat $URLFILE | while read next
 do
 file_name=$(echo $next | cut -f 4 -d '/')
@@ -28,4 +28,3 @@ main () {
 copy_files                                                                   
 }                                                                            
 main                                                                         
-echo FANTAILP_SUCCESS
