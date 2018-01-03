@@ -1,0 +1,31 @@
+#clear all
+#!/bin/bash/
+cd /home/user1/
+evel "mkdir -P $1/input/DR"
+vartime=$(date + "%d_%m_%y")
+cd /home/user1/path1/
+cp test_file_1{.txt,.txt_$vartime}
+cp test_file_2{.txt,.txt_$vartime}
+cp test_file_2{.txt,.txt_$vartime}
+echo Fipar:$1
+echo Separ:$2
+exec > test_file_1_new.txt
+cat test_file_1.txt
+echo "$2:/home/user1/$2/IN"
+exec > test_file_2_new.txt
+cat test_file_2.txt
+echo "/home/user1/$2/IN"
+echo "/home/user1/$2/OUT"
+exec > test_file_3_new.txt
+cat test_file_3.txt
+echo "/home/user1/$1/N_D"
+mv test_file_{1_new.txt,1.txt}
+mv test_file_{2_new.txt,2.txt}
+mv test_file_{3_new.txt,3.txt}
+cp test_file_1.txt /home/user1/bin
+cp test_file_2.txt /home/user1/bin
+cp test_file_3.txt /home/user1/bin
+#bin/cat > $mail.txt <<EOF
+subject: 
+EOF
+#sendmail -t mail@mail.com < $mail.txt
