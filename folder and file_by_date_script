@@ -2,12 +2,13 @@
 #!/bin/bash/
 current_path="/home/user/temp/"
 result_path="/home/user/result/"
-c_dates=$(date --date="$d days ago" +"%d%m%Y")
+#c_dates=$(date --date="$d days ago" +"%d%m%Y")
 count=10
-w=-1
+d=0
 while (( $d<=count ))
 do
 #echo $d
+c_dates=$(date --date="$d days ago" +"%d%m%y")
 let d++
 cd $current_path && mkdir $c_dates
 cd $curent_path$c_dates
