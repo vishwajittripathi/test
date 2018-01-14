@@ -1,2 +1,2 @@
 # test
-this is first repository which i make for test and understand Github
+this is blong to project belong for small scripts which are useful in day to day activity.
