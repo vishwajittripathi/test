@@ -1,0 +1,18 @@
+#clear all
+#!/bin/bash/
+current_path="/home/user/temp/"
+result_path="/home/user/result/"
+c_dates=$(date --date="$d days ago" +"%d%m%Y")
+count=10
+w=-1
+while (( $d<=count ))
+do
+#echo $d
+let d++
+cd $current_path && mkdir $c_dates
+cd $curent_path$c_dates
+exec >$c_dates.txt
+echo "$c_dates"
+for i in $current_path$c_dates
+do
+eval "cp $current_path$c_dates/*.* "$result_path""
