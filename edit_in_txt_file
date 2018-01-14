@@ -1,5 +1,11 @@
 #clear all
 #!/bin/bash/
+if [[ "$i" == null ]] || [[ "$2" == null ]] || [[ -z "$1" ]] || [[ -z "$2" ]]
+then
+"Enter correct parameter1 and parameter2"
+else
+if [[ "$1" = ~^ [[ :alnum: ]] {4,8}$ ]] && [[ "$2" = ~^ [[ :digit: ]] {4}+$ ]]
+then
 cd /home/user1/
 evel "mkdir -P $1/input/DR"
 vartime=$(date + "%d_%m_%y")
@@ -25,7 +31,11 @@ mv test_file_{3_new.txt,3.txt}
 cp test_file_1.txt /home/user1/bin
 cp test_file_2.txt /home/user1/bin
 cp test_file_3.txt /home/user1/bin
+else
+echo "parameter1 or paramter2 are not in proper format"
+if
+if
 #bin/cat > $mail.txt <<EOF
-subject: 
+subject: $1,for $2 done 
 EOF
 #sendmail -t mail@mail.com < $mail.txt
