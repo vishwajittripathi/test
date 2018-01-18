@@ -1,0 +1,14 @@
+create table TABLE_1 (
+    serial_no number constraint table_1_pk primary key,
+    corprate_name varchar2(12),
+    production_name varchar2(12),
+    Date_received date,
+    assign_to varchar2(20),
+    PSM varchar2(4000),
+    Client_contact number,
+    client_mail varchar2(30),
+    PSM_Contact varchar2(10),
+    PSM_mail varchar2(30),
+    Remarks blob
+);
+/
