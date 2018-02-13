@@ -17,3 +17,5 @@ echo "$c_dates"
 for i in $current_path$c_dates
 do
 eval "cp $current_path$c_dates/*.* "$result_path""
+dd if=/dev/zero of=DR_$current_date\_01.txt bs=1 count=0 seek=1024
+dd if=/dev/zero of=DR_$current_date\_01.txt bs=1 count=0 seek=1024
