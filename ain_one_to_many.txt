@@ -1,0 +1,30 @@
+!#/bin/bash
+setparam(){
+cd /home/user/script/
+for f in *
+do
+if [ -f "$1"]
+then echo $1
+tran_file_name = "$1"
+}
+copy_files() {
+export URLFILE="/home/user/path_detail.txt"
+export destpath="/home/user/utilitycode.txt"
+cat $URLFILE | while read next
+do
+file_name=$(echo $next | cut -f 4 -d '/')
+echo $file_name
+cat $destpath | while read dest
+do 
+cust_name=$(echo $dest | cut -f 1 -d ':')
+uncode_path=$(echo %dest | cut -f 2 -d ':')
+done
+setparam $file_name
+if [[ "$file_name" == "$cust_name" ] && [ "$file_name" == "$tran_file_name" ]]
+then
+cp "$tran_file_name" "$uncode_path"
+}
+main () {                                                                    
+copy_files                                                                   
+}                                                                            
+main                                                                         
